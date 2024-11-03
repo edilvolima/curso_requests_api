@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 import requests
 import base64
 import os
@@ -56,4 +59,5 @@ novo_repo.add_arquivo(nome_repo, 'linguagens_amzn.csv', 'dados/linguagens_amzn.c
 novo_repo.add_arquivo(nome_repo, 'linguagem_netflix.csv', 'dados/linguagens_netflix.csv')
 novo_repo.add_arquivo(nome_repo, 'linguagem_spotify.csv', 'dados/linguagens_spotify.csv')
 novo_repo.add_arquivo(nome_repo, 'linguagens_apple.csv', 'dados/linguagens_apple.csv')
+novo_repo.add_arquivo(nome_repo, 'linguagens_edilvolima.csv', 'dados/linguagens_edilvolima.csv')
 
