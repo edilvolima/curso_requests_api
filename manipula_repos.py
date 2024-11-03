@@ -24,7 +24,7 @@ class ManupulaRepositorios:
         response = requests.post(f'{self.api_base_url}/user/repos',
                                  headers=self.headers, json=data)
         
-        print(f'status_code criação do repositório: {response.status_code}')
+        print(f'status_code: {response.status_code},  criação do repositório: {nome_repo}')
     
     
     def add_arquivo(self, nome_repo, nome_arquivo, caminho_arquivo):
@@ -42,7 +42,7 @@ class ManupulaRepositorios:
         }
         
         response = requests.put(url, headers=self.headers, json=data)
-        print(f'status_code upload do arquivo: {response.status_code}')
+        print(f'status_code: {response.status_code}, upload do arquivo: {nome_arquivo}')
         
 # Instanciando um objeto
 novo_repo = ManupulaRepositorios('edilvolima')
@@ -55,4 +55,5 @@ novo_repo.cria_repo(nome_repo)
 novo_repo.add_arquivo(nome_repo, 'linguagens_amzn.csv', 'dados/linguagens_amzn.csv')
 novo_repo.add_arquivo(nome_repo, 'linguagem_netflix.csv', 'dados/linguagens_netflix.csv')
 novo_repo.add_arquivo(nome_repo, 'linguagem_spotify.csv', 'dados/linguagens_spotify.csv')
+novo_repo.add_arquivo(nome_repo, 'linguagens_apple.csv', 'dados/linguagens_apple.csv')
 
