@@ -1,6 +1,6 @@
 import requests
 import base64
-import request_token as access_token
+import os
 
 
 
@@ -9,7 +9,7 @@ class ManupulaRepositorios:
     def __init__(self, username):
         self.username = username
         self.api_base_url = 'https://api.github.com'
-        self.access_token = access_token.REQUESTS_TOKEN
+        self.access_token = os.environ.get('REQUESTS_TOKEN')
         self.headers = {'Authorization': 'Bearer ' + self.access_token,
                         'X-GitHub-Api-Version': '2022-11-28'}
         
